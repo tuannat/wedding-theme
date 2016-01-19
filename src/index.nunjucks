@@ -1,0 +1,36 @@
+{% extends '_layouts/one-col.nunjucks' %}
+
+{% import "_modules/link/link.nunjucks" as link %}
+
+{% block one_col %}
+<section class="row-container">
+  <div class="bride-groom-info">
+    <div class="heart">&hearts;</div>
+    <div class="info">
+        <h1>Anh Tuấn & Hoài Thương</h1>
+        <h3><b>Quảng Bình</b> 29.01.2016 & <b>Hà Nội</b> 02.02.2016</h3>
+    </div>
+  </div>
+</section>
+
+<section class="row-container">
+  <div class="timeline-info">
+    <div class="col">
+        <div class="round-img">
+            <img src="images/groom.jpg" alt="groom" />
+        </div>
+    </div>
+    <div class="col">
+        <div class="round-img">
+            <img src="images/bride.jpg" alt="groom" />
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="row-container">
+  <div class="album-info">
+    <div id="photos"></div>
+  </div>
+</section>
+{% endblock %}

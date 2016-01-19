@@ -1,0 +1,26 @@
+{
+  "name": "wedding.tuannat.me",
+  "authors": [
+    "TuanNAT <contact@tuannat.me>"
+  ],
+  "description": "My Wedding Website",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "wedding",
+    "love",
+    "album",
+    "timeline"
+  ],
+  "license": "MIT",
+  "homepage": "http://wedding.tuannat.me",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  }
+}
