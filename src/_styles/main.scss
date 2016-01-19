@@ -10,17 +10,62 @@ $fancybox-image-url: '../images';
 // fancybox
 @import 'node_modules/fancybox/dist/scss/jquery.fancybox';
 
+@import './partials/variables'; // colors, fonts etc...
+@import './partials/mixins'; // custom mixins
+@import './partials/layout'; // responsive grid and media queries
+
 // Import Modules
 @import '../_modules/link/link';
 
-// Box sizing partial styles:
-// Apply a natural box layout model to all elements
-*,
-*:before,
-*:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+// main style
+html * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:after, *:before {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font: {
+        size: 100%;
+        family: $primary-font; // variables inside partials > _variables.scss
+    }
+    color: $main-text;
+    background-color: $background;
+}
+
+a {
+    color: $link;
+    text-decoration: none;
+    font-family: $secondary-font;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-family: $big-title-font;
+}
+h2, h3 {
+    font-family: $secondary-font;
+    font-weight: bold;
+}
+
+.cd-container { /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+    width: 90%;
+    max-width: $L; // breakpoints inside partials > _layout.scss
+    margin: 0 auto;
+
+    &::after { /* clearfix */
+        content: '';
+        display: table;
+        clear: both;
+    }
 }
 
 // Styling on warning for users on IE7 or below
@@ -59,15 +104,15 @@ $fancybox-image-url: '../images';
         text-align: center;
 
         h1 {
-            font-family: 'Lobster', cursive;
-            font-size: 5rem;
+            font-family: $big-title-font;
+            font-size: 5em;
             color: white;
             text-shadow: 1px 1px 20px black;
             margin: 0;
         }
 
         h3 {
-            font-family: 'Roboto Condensed', sans-serif;
+            font-family: $secondary-font;
             font-size: 1.5rem;
             color: white;
             text-shadow: 1px 1px 5px black;
@@ -78,96 +123,26 @@ $fancybox-image-url: '../images';
     @include media(max-width 1200px, 6) {
         .info {
             h1 {
-                font-size: 3.5rem;
+                font-size: 3.5em;
             }
 
             h3 {
-                font-size: 1.2rem;
+                font-size: 1.2em;
             }
         }
     }
     @include media(max-width 767px, 4) {
         .info {
             h1 {
-                font-size: 1.8rem;
+                font-size: 1.8em;
             }
 
             h3 {
-                font-size: 0.8rem;
+                font-size: 0.8em;
             }
         }
     }
 }
-
-.timeline-info {
-    @include fill-parent;
-    overflow: hidden;
-    padding: 60px 0;
-    .col {
-        @include span-columns(5);
-        text-align: center;
-        &:first-child {
-            @include shift(1);
-        }
-    }
-    @include media(max-width 1200px, 6) {
-        padding: 40px 0;
-        .col {
-            @include span-columns(2);
-            &:first-child {
-                @include shift(1);
-            }
-        }
-    }
-    @include media(max-width 767px, 4) {
-        padding: 30px 0;
-        .col {
-            @include span-columns(2);
-            &:first-child {
-                @include shift(0);
-            }
-        }
-    }
-}
-
-.round-img {
-    position: relative;
-    display: inline-block;
-    width: 400px;
-    height: 400px;
-    overflow: hidden;
-
-    @include border-top-radius(50%);
-    @include border-bottom-radius(50%);
-    border: 1px solid #aaa;
-    box-shadow: 0 0 1px #ccc;
-
-    &:before {
-        content: '';
-        position: absolute;
-        top: 3%;
-        left: 3%;
-        width: 94%;
-        height: 94%;
-        @include border-top-radius(50%);
-        @include border-bottom-radius(50%);
-        border: 1px solid #ddd;
-    }
-
-    img {
-        width: 100%;
-    }
-
-    @include media(max-width 1200px, 6) {
-        width: 250px;
-        height: 250px;
-    }
-    @include media(max-width 767px, 4) {
-        width: 150px;
-        height: 150px;
-    }
-}
-
 
 // heartbeat
 @include keyframes(beat) {
@@ -261,5 +236,374 @@ $fancybox-image-url: '../images';
         -moz-column-count:    1;
         -webkit-column-count: 1;
         column-count:         1;
+    }
+}
+
+// Timeline
+h1.timeline {
+    margin: 0;
+    padding: 1em;
+    text-align: center;
+    font-size: 4em;
+
+    @include media(max-width 1200px, 6) {
+        font-size: 2.5em;
+    }
+    @include media(max-width 767px, 4) {
+        font-size: 2em;
+    }
+}
+
+.timeline-info {
+    @include fill-parent;
+    overflow: hidden;
+
+    .col {
+        @include span-columns(5);
+        text-align: center;
+        &:first-child {
+            @include shift(1);
+        }
+    }
+    @include media(max-width 1200px, 6) {
+        .col {
+            @include span-columns(2);
+            &:first-child {
+                @include shift(1);
+            }
+        }
+    }
+    @include media(max-width 767px, 4) {
+        .col {
+            @include span-columns(2);
+            &:first-child {
+                @include shift(0);
+            }
+        }
+    }
+}
+
+.round-img {
+    position: relative;
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+
+    @include border-top-radius(50%);
+    @include border-bottom-radius(50%);
+    border: 1px solid #aaa;
+    box-shadow: 0 0 1px #ccc;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 3%;
+        left: 3%;
+        width: 94%;
+        height: 94%;
+        @include border-top-radius(50%);
+        @include border-bottom-radius(50%);
+        border: 1px solid #ddd;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    @include media(max-width 1200px, 6) {
+        width: 250px;
+        height: 250px;
+    }
+    @include media(max-width 767px, 4) {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+#cd-timeline {
+    position: relative;
+    padding: 2em 0;
+    margin: {
+        top: 2em;
+        bottom: 2em;
+    }
+
+    &::before {
+        /* this is the vertical line */
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 18px;
+        height: 100%;
+        width: 4px;
+        background: darken($background, 5%);
+    }
+
+    @include MQ(L) {
+        &::before {
+            left: 50%;
+            margin-left: -2px;
+        }
+    }
+}
+
+.cd-timeline-block {
+    position: relative;
+    margin: 2em 0;
+    @include clearfix;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include MQ(L) {
+        margin: 4em 0;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.cd-timeline-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px $color-3, inset 0 2px 0 rgba(#000, .08), 0 3px 0 4px rgba(#000, .05) ;
+
+    img {
+        display: block;
+        width: 24px;
+        height: 24px;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        margin-left: -12px;
+        margin-top: -12px;
+    }
+
+    &.cd-picture {
+        background: $color-4;
+    }
+
+    &.cd-movie {
+        background: $color-2;
+    }
+
+    &.cd-location {
+        background: $color-5;
+    }
+
+    @include MQ(L) {
+        width: 60px;
+        height: 60px;
+        left: 50%;
+        margin-left: -30px;
+
+        /* Force Hardware Acceleration in WebKit */
+        -webkit-transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+
+        .cssanimations &.is-hidden {
+            visibility: hidden;
+        }
+
+        .cssanimations &.bounce-in {
+            visibility: visible;
+            @include animation(cd-bounce-1 .6s);
+        }
+    }
+}
+
+@include keyframes(cd-bounce-1) {
+    0% {
+        opacity: 0;
+        @include transform(scale(.5));
+    }
+
+    60% {
+        opacity: 1;
+        @include transform(scale(1.2));
+    }
+
+    100% {
+        @include transform(scale(1));
+    }
+}
+
+.cd-timeline-content {
+    position: relative;
+    margin-left: 60px;
+    background: darken($background, 5%);
+    @include border-radius;
+    padding: 1em;
+    box-shadow: 0 3px 0 darken($background, 10%);
+    @include clearfix;
+
+    h2 {
+        color: $color-1;
+    }
+
+    p, .cd-read-more, .cd-date {
+        @include font-size(13px);
+    }
+
+    .cd-read-more, .cd-date {
+        display: inline-block;
+    }
+
+    p {
+        margin: 1em 0;
+        line-height: 1.6;
+    }
+
+    .cd-read-more {
+        float: right;
+        padding: .8em 1em;
+        background: $link;
+        color: $color-3;
+        @include border-radius;
+
+        .no-touch &:hover {
+            background-color: lighten($link, 5%);
+        }
+    }
+
+    .cd-date {
+        float: left;
+        padding: .8em 0;
+        opacity: .7;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 16px;
+        right: 100%;
+        height: 0;
+        width: 0;
+        border: 7px solid transparent;
+        border-right: 7px solid darken($background, 5%);
+    }
+
+    @include MQ(M) {
+        h2 {
+            @include font-size(20px);
+        }
+
+        p {
+            @include font-size(16px);
+        }
+
+        .cd-read-more, .cd-date {
+            @include font-size(14px);
+        }
+    }
+
+    @include MQ(L) {
+        margin-left: 0;
+        padding: 1.6em;
+        width: 45%;
+
+        &::before {
+            top: 24px;
+            left: 100%;
+            border-color: transparent;
+            border-left-color: darken($background, 5%);
+        }
+
+        .cd-read-more {
+            float: left;
+        }
+
+        .cd-date {
+            position: absolute;
+            width: 100%;
+            left: 122%;
+            top: 6px;
+            @include font-size(16px);
+        }
+
+        .cd-timeline-block:nth-child(even) & {
+            float: right;
+
+            &::before {
+                top: 24px;
+                left: auto;
+                right: 100%;
+                border-color: transparent;
+                border-right-color: darken($background, 5%);
+            }
+
+            .cd-read-more {
+                float: right;
+            }
+
+            .cd-date {
+                left: auto;
+                right: 122%;
+                text-align: right;
+            }
+        }
+
+        .cssanimations &.is-hidden {
+            visibility: hidden;
+        }
+
+        .cssanimations &.bounce-in {
+            visibility: visible;
+            @include animation(cd-bounce-2 .6s);
+        }
+    }
+}
+
+@include MQ(L) {
+    /* inverse bounce effect on even content blocks */
+    .cssanimations .cd-timeline-block:nth-child(even) .cd-timeline-content.bounce-in {
+        @include animation(cd-bounce-2-inverse .6s);
+    }
+}
+
+@include keyframes(cd-bounce-2) {
+    0% {
+        opacity: 0;
+        @include transform(translateX(-100px));
+    }
+
+    60% {
+        opacity: 1;
+        @include transform(translateX(20px));
+    }
+
+    100% {
+        @include transform(translateX(0));
+    }
+}
+
+@include keyframes(cd-bounce-2-inverse) {
+    0% {
+        opacity: 0;
+        @include transform(translateX(100px));
+    }
+
+    60% {
+        opacity: 1;
+        @include transform(translateX(-20px));
+    }
+
+    100% {
+        @include transform(translateX(0));
     }
 }

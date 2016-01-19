@@ -14,18 +14,112 @@
 </section>
 
 <section class="row-container">
-  <div class="timeline-info">
-    <div class="col">
-        <div class="round-img">
-            <img src="images/groom.jpg" alt="groom" />
+    <h1 class="timeline">Our Story</h1>
+    <div class="timeline-info">
+        <div class="col">
+            <div class="round-img">
+                <img src="images/groom.jpg" alt="groom" />
+            </div>
+        </div>
+        <div class="col">
+            <div class="round-img">
+                <img src="images/bride.jpg" alt="groom" />
+            </div>
         </div>
     </div>
-    <div class="col">
-        <div class="round-img">
-            <img src="images/bride.jpg" alt="groom" />
-        </div>
-    </div>
-  </div>
+
+    <div id="cd-timeline" class="cd-container">
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-location">
+                <img src="images/cd-icon-location.svg" alt="Location">
+            </div> <!-- cd-timeline-img -->
+
+            <div class="cd-timeline-content">
+                <h2>Became Friend on Facebook</h2>
+                <span class="cd-date">2014 Jan 17</span>
+            </div> <!-- cd-timeline-content -->
+        </div> <!-- cd-timeline-block -->
+
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-location">
+                <img src="images/cd-icon-location.svg" alt="Location">
+            </div> <!-- cd-timeline-img -->
+
+            <div class="cd-timeline-content">
+                <h2>First Met</h2>
+                <span class="cd-date">2014 Feb 10</span>
+            </div> <!-- cd-timeline-content -->
+        </div> <!-- cd-timeline-block -->
+
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-location">
+                <img src="images/cd-icon-location.svg" alt="Location">
+            </div> <!-- cd-timeline-img -->
+
+            <div class="cd-timeline-content">
+                <h2>Being Love</h2>
+                <span class="cd-date">2014 Mar 9</span>
+            </div> <!-- cd-timeline-content -->
+        </div> <!-- cd-timeline-block -->
+
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-movie">
+                <img src="images/cd-icon-movie.svg" alt="Movie">
+            </div> <!-- cd-timeline-img -->
+
+            <div class="cd-timeline-content">
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/109557658&amp;color=00aabb&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                <span class="cd-date">2014 Mar 10</span>
+            </div> <!-- cd-timeline-content -->
+        </div> <!-- cd-timeline-block -->
+
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-picture">
+                <img src="images/cd-icon-picture.svg" alt="Picture">
+            </div> <!-- cd-timeline-img -->
+
+            <div class="cd-timeline-content">
+                <h2>Proposal</h2>
+                <p><img src="images/proposal.jpg" alt="Proposal"></p>
+                <span class="cd-date">2015 Oct 22</span>
+            </div> <!-- cd-timeline-content -->
+        </div> <!-- cd-timeline-block -->
+
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-picture">
+                <img src="images/cd-icon-picture.svg" alt="Picture">
+            </div> <!-- cd-timeline-img -->
+
+            <div class="cd-timeline-content">
+                <h2>Engagement</h2>
+                <p><img src="images/engagement.jpg" alt="Engagement"></p>
+                <span class="cd-date">2015 Dec 1</span>
+            </div> <!-- cd-timeline-content -->
+        </div> <!-- cd-timeline-block -->
+
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-location">
+                <img src="images/cd-icon-location.svg" alt="Location">
+            </div> <!-- cd-timeline-img -->
+
+            <div class="cd-timeline-content">
+                <h2>Wedding</h2>
+                <p><b>Quảng Bình</b> 2016 Jan 29 & <b>Hà Nội</b> 2016 Feb 2</p>
+                <span class="cd-date">2016 Jan 29 & Feb 2</span>
+            </div> <!-- cd-timeline-content -->
+        </div> <!-- cd-timeline-block -->
+
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-movie">
+                <img src="images/cd-icon-movie.svg" alt="Movie">
+            </div> <!-- cd-timeline-img -->
+
+            <div class="cd-timeline-content">
+                <h2>To be continued...</h2>
+                <span class="cd-date">Ever after</span>
+            </div> <!-- cd-timeline-content -->
+        </div> <!-- cd-timeline-block -->
+    </div> <!-- cd-timeline -->
 </section>
 
 <section class="row-container">

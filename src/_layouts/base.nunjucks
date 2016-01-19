@@ -19,8 +19,25 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <title>Anh Tuấn & Hoài Thương</title>
-    <meta name="description" content="A new Yeogurt application"/>
+    <meta name="description" content="Our Story and Our Wedding"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="keywords" content="wedding, website, tuannat, novemberdaisy" />
+
+    <meta name="author" content="TuanNAT contact@tuannat.me" />
+    <meta name="copyright" content="MIT" />
+    <meta name="application-name" content="wedding.tuannat.me" />
+
+    <meta property="og:title" content="Anh Tuấn & Hoài Thương" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="http://wedding.tuannat.me/images/bg1.jpg" />
+    <meta property="og:url" content="http://wedding.tuannat.me" />
+    <meta property="og:description" content="Our Story and Our Wedding" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Anh Tuấn & Hoài Thương" />
+    <meta name="twitter:description" content="Our Story and Our Wedding" />
+    <meta name="twitter:image" content="http://wedding.tuannat.me/images/bg1.jpg" />
+
     <link rel="stylesheet" href="{{baseUrl}}styles/main.css"/>
     {% block stylesheets %}{% endblock %}
 
