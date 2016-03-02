@@ -7,8 +7,8 @@
   <div class="bride-groom-info">
     <div class="heart">&hearts;</div>
     <div class="info">
-        <h1>Anh Tuấn & Hoài Thương</h1>
-        <h3><b>Quảng Bình</b> 29.01.2016 & <b>Hà Nội</b> 02.02.2016</h3>
+        <h1>John Groom & Susan Bride</h1>
+        <h3><b>Zimbabwe</b> 01.01.2016</h3>
     </div>
   </div>
 </section>
@@ -68,7 +68,7 @@
             </div> <!-- cd-timeline-img -->
 
             <div class="cd-timeline-content">
-            <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/109557658&amp;color=00aabb&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/131817798&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
                 <span class="cd-date">2014 Mar 10</span>
             </div> <!-- cd-timeline-content -->
         </div> <!-- cd-timeline-block -->
@@ -102,10 +102,10 @@
                 <img src="images/cd-icon-location.svg" alt="Location">
             </div> <!-- cd-timeline-img -->
 
-            <div class="cd-timeline-content">
+            <div class="cd-timeline-content">chrom
                 <h2>Wedding</h2>
-                <p><b>Quảng Bình</b> 2016 Jan 29 & <b>Hà Nội</b> 2016 Feb 2</p>
-                <span class="cd-date">2016 Jan 29 & Feb 2</span>
+                <p><b>Zimbabwe</b> 01.01.2016</p>
+                <span class="cd-date">2016 Jan 01</span>
             </div> <!-- cd-timeline-content -->
         </div> <!-- cd-timeline-block -->
 

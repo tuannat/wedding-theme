@@ -1,12 +1,14 @@
-# Wedding.tuannat.me readme
+# wedding.tuannat.me readme
 
-Generated on 2016-01-18 using
-[generator-yeogurt@1.4.0](https://github.com/larsonjj/generator-yeogurt)
+## Author
+TuanNAT http://tuannat.me
 
 ## Description
 
-This is an example readme file.
-Describe your site/app here.
+This is an wedding theme for just married couple put their information of wedding. You are free to use this.
+
+## Demo
+[wedding.tuannat.me](http://wedding.tuannat.me)
 
 ## Technologies used
 
@@ -20,6 +22,7 @@ Testing
 
 Styles
 - [Sass](http://sass-lang.com/) via ([node-sass](https://github.com/sass/node-sass))
+- [Bourbon and Neat](http://bourbon.io/)
 
 Markup
 - [Nunjucks](https://mozilla.github.io/nunjucks/)
@@ -55,5 +58,8 @@ The tasks are as follows:
 
 `gulp test`: Lints all `*.js` file in the `source` folder using eslint and runs all `*.test.js` file unit tests through [Karma](http://karma-runner.github.io/0.13/index.html) and Jasmine
 `gulp test --watch`: Same as `gulp test` but will constantly watch `*.test.js` files and rerun tests when changes are detected
+`gulp build`: Build zip file of complied project.
+
+***Photos put in album folder and thumbs inside it***
 
 ***Adding the `--debug` option to any gulp task displays extra debugging information (ex. data being loaded into your templates)***
