@@ -1,14 +1,14 @@
-# wedding.tuannat.me readme
+# wedding-theme readme
 
 ## Author
 TuanNAT http://tuannat.me
 
 ## Description
 
-This is an wedding theme for just married couple put their information of wedding. You are free to use this.
+This is an wedding theme for just married couple put their information of wedding.
 
 ## Demo
-[wedding.tuannat.me](http://wedding.tuannat.me)
+[wedding-theme](http://tuannat.github.io/wedding-theme/)
 
 ## Technologies used
 
@@ -59,6 +59,7 @@ The tasks are as follows:
 `gulp test`: Lints all `*.js` file in the `source` folder using eslint and runs all `*.test.js` file unit tests through [Karma](http://karma-runner.github.io/0.13/index.html) and Jasmine
 `gulp test --watch`: Same as `gulp test` but will constantly watch `*.test.js` files and rerun tests when changes are detected
 `gulp build`: Build zip file of complied project.
+`gulp deploy`: Deploy build to gh-pages use after `gulp build --production`
 
 ***Photos put in album folder and thumbs inside it***
 
